@@ -10,7 +10,7 @@ def annotate(syms, vecs, pl_ax, is_3d, text_size=None):
     for i, sym in enumerate(syms):
         xy = vecs[i, :]
         if text_size is None:
-            text_size = 'xx-small'
+            text_size = 'small'
         pl_ax.annotate(sym, xy=xy, xytext=(-3, 2),
                        textcoords = 'offset points', size=text_size, color='b')
 
@@ -27,7 +27,7 @@ def plot_vec(vecs, syms, highlight_syms=None,
     else:
         assert vecs.shape[1] == 2
 
-    plt.scatter(vecs[:, 0], vecs[:, 1], s=20, color='b')
+    plt.scatter(vecs[:, 0], vecs[:, 1], s=10, color='b')
 
     if highlight_syms is not None:
         pass
@@ -42,6 +42,6 @@ def plot_vec(vecs, syms, highlight_syms=None,
     plt.title('chord space')
     plt.tick_params(axis='both', which='major', labelsize=6)
 
-    #plt.savefig('%s.pdf' % 'chord_space.pdf')
+    plt.savefig('%s.pdf' % 'chord_space.pdf')
 
-    plt.show()
+    # plt.show()
