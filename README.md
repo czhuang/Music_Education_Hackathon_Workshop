@@ -18,4 +18,5 @@ INSTALLATION
     pip install numpy
     pip install music21
     pip install matplotlib
+    pip install sklearn
 
